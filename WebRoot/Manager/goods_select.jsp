@@ -24,6 +24,9 @@ int pagecount=1;
      货物信息
   </td>
   </tr>
+    <tr align="right">
+        <td height="29" colspan="5"><a href="goods_add.jsp">发布动态信息</a></td>
+    </tr>
   <tr align="center">
     <td width="11%" height="29">货物类型</td>
     <td width="11%" height="29">货物名称</td>

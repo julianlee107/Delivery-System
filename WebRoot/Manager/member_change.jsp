@@ -34,7 +34,7 @@ int code;
 <table width="785" height="238" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
   <tr>
     <td width="100%" height="39">
-      <p align="center">公告信息修改</td>
+      <p align="center">会员信息修改</td>
   </tr>
 <%
 sql="select * from tb_Placard where ID="+request.getParameter("id");

@@ -47,7 +47,7 @@ response.sendRedirect("goods_select.jsp");
 }else
 {
 %>
-<script language="javascript">
+<script>
 alert("您输入的货物信息修改失败！！！");
 history.back();
 <%
