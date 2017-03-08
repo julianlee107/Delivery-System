@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
     <link rel="stylesheet" href="../CSS/style.css">
     <title>
-        Goods_xiangxi page
+        car_show page
     </title>
 </head>
 <%!
@@ -84,7 +84,14 @@
         <td width="21%" height="31" align="center">发布人：</td>
         <td height="31" colspan="3" align="left"><%=userName%></td>
     </tr>
-
+    <tr>
+        <td width="30%" height="16">
+            <input type="submit" value="修改" name="B1"onClick="return check()">
+            <input type="reset" value="重写" name="B2">
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            <a href="car_select.jsp">返回</a>
+        </td>
+    </tr>
     <%
             }
 
@@ -93,6 +100,7 @@
             System.out.println("查询异常！！");
         }
     %>
+
 </table><jsp:include page="../down.jsp"/>
 </body>
 </html>
