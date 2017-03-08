@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
     <link rel="stylesheet" href="../CSS/style.css">
     <title>
-        placard page
+        car page
     </title>
 </head>
 <%!
@@ -82,7 +82,9 @@
         <td width="92" height="29" align="center"><%=rs.getString("DrverTime")%>></td>
         <td width="92" height="29" align="center"><%=rs.getString("Style")%>></td>
         <td height="32" align="center">
-            <a href="car_show.jsp?id=<%=code%>">详细</a>
+            <a href="car_show.jsp?code=<%=code%>">详细</a>
+            <a href="car_change.jsp?code=<%=code%>">&nbsp;修改</a></td>
+            <a href="car_delete.jsp?code=<%=code%>">&nbsp;删除</a></td>
     </tr>
     <%
             if(!rs.next())
@@ -96,10 +98,10 @@
                 <tr>
                     <td width="786" height="30" colspan="9" align="right">
                         共<%=pagecount%>页&nbsp;&nbsp;
-                        <a href="active_select.jsp?topage=<%=1%>">第一页</a>&nbsp;&nbsp;
-                        <a href="active_select.jsp?topage=<%=showpage-1%>">上一页</a>&nbsp;&nbsp;
-                        <a href="active_select.jsp?topage=<%=showpage+1%>">下一页</a>&nbsp;&nbsp;
-                        <a href="active_select.jsp?topage=<%=pagecount%>">最后一页</a>&nbsp;&nbsp;
+                        <a href="car_select.jsp?topage=<%=1%>">第一页</a>&nbsp;&nbsp;
+                        <a href="car_select.jsp?topage=<%=showpage-1%>">上一页</a>&nbsp;&nbsp;
+                        <a href="car_select.jsp?topage=<%=showpage+1%>">下一页</a>&nbsp;&nbsp;
+                        <a href="car_select.jsp?topage=<%=pagecount%>">最后一页</a>&nbsp;&nbsp;
 
                     </td>
                 </tr>

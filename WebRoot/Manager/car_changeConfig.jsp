@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>
-        Goods_change_config page
+        car_change_config page
     </title>
 </head>
 <body bgcolor="#ffffff">
@@ -31,12 +31,12 @@
     String issudate=request.getParameter("issudate");
     String username=request.getParameter("username").trim();
     java.sql.Date gshowdate=new java.sql.Date(date.getYear(),date.getMonth(),date.getDate());
-    sql="update tb_CarMeg set Trademark='"+trademark+"',Brand='"+brand+"',CarLord='"+
+    sql="update tb_CarMessage set Trademark='"+trademark+"',Brand='"+brand+"',CarLord='"+
             car_load+"',UsedTime='"+used_time+"',DriverName='"+driver_name+"',LicenceNumber='"+licence_num+"',licence='"+
             licence_style+"',TransportStyle='"+transport_style+"',LinkMan='"+link_man+"',DriverTime='"+driver_time+",LinkPhone='"+
-            link_phone+"',Link='"+glink+"',IssueDate='"+
-            gshowdate+"',Remark='"+gremark+"',UserName='"+
-            username+"' where Code="+request.getParameter("code");
+            link_phone+"',IssueDate='"+
+            issudate+"',Remark='"+remark+"',UserName='"+
+            username+"',Style='"+style+" where Code="+request.getParameter("code");
     boolean sert=connection.executeUpdata(sql);
     if(sert)
     {%>

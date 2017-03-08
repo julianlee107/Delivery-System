@@ -21,7 +21,7 @@
 <body bgcolor="#ffffff"><jsp:include page="mtop.jsp"/>
 <table width="785" height="117" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
     <tr>
-        <td height="38" align="center" colspan="5">网站公告信息</td>
+        <td height="38" align="center" colspan="5">物流知识信息</td>
     </tr>
     <tr>
         <td height="29" align="right" colspan="5">
