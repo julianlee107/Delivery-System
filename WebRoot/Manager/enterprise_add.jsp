@@ -67,8 +67,8 @@
 </Script>
 <body bgcolor="#ffffff">
 
-<jsp:include page="top.jsp"/>
-<p align="center"><b>企业信息修改</b></p>
+<jsp:include page="mtop.jsp"/>
+<p align="center"><b>企业信息发布</b></p>
 <form method="POST" action="enterprise_addConfig.jsp" name="form1">
     <table width="786" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
         <tr>
@@ -95,14 +95,14 @@
             </td>
             <td width="30%" height="42">
                 <p align="center"><input type="text" name="workArea" size="20"></p>
-            </td>顿
+            </td>
         </tr>
         <tr>
             <td width="20%" height="43">
                 <p align="center">企业地址：</p>      </td>
             <td width="36%" height="43">
                 <p align="center"><input type="text" name="address" size="20"></p>
-            </td>年
+            </td>
             <td width="18%" height="43">
                 <p align="center">联系电话：</p>
             </td>
@@ -169,7 +169,7 @@
         <tr>
             <td width="786" height="58" colspan="4">
                 <p align="center">
-                    <input type="submit" name="show" value="修改" onClick="return check()">
+                    <input type="submit" name="show" value="发布" onClick="return check()">
                     <input type="reset" name="reset" value="重置"> &nbsp;&nbsp;<a href="enterprise_select.jsp">返回</a>
             </td>
         </tr>

@@ -23,10 +23,10 @@ int pagecount=1;
   <td width="100%" colspan="9" height="60" align="center">
      货物信息
   </td>
+  <tr>
+    <td width="786" height="30" colspan="9" align="right"><a href="goods_add.jsp">发布信息...</a></td>
   </tr>
-    <tr align="right">
-        <td height="29" colspan="5"><a href="goods_add.jsp">发布动态信息</a></td>
-    </tr>
+  </tr>
   <tr align="center">
     <td width="11%" height="29">货物类型</td>
     <td width="11%" height="29">货物名称</td>
@@ -47,7 +47,7 @@ if(!rs.next())
 %>
 <script language="javascript">
 	alert("没有货物信息");
-        history.back();
+       <% response.sendRedirect("goods_add.jsp");%>;
 </script>
 <%
 }else
@@ -109,5 +109,5 @@ break;
 {e.printStackTrace();}
 %>
 </table>
-</body><jsp:include page="../down.jsp"/>
+</body><jsp:include page="down.jsp"/>
 </html>

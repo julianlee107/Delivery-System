@@ -67,7 +67,7 @@
 </Script>
 <body bgcolor="#ffffff">
 
-<jsp:include page="top.jsp"/>
+<jsp:include page="mtop.jsp"/>
 <p align="center"><b>企业信息修改</b></p>
 <form method="POST" action="enterprise_changeConfig.jsp" name="form1">
     <table width="786" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">

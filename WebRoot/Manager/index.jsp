@@ -32,8 +32,3 @@ window.location.href="../index.jsp";
 </table>
 </body>
 </html>
-
-
-
-
-

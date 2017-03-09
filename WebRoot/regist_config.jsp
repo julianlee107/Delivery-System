@@ -20,7 +20,8 @@ regist_config
 	String result=request.getParameter("result");
 	String question=request.getParameter("question");
     CountTime time=new CountTime();
-       String str="select Name from tb_customar where Name='"+name+"'";
+    java.sql.Date gshowdate=new java.sql.Date(date.getYear(),date.getMonth(),date.getDate());
+       String str="select Name from tb_customer where Name='"+name+"'";
 	ResultSet rs=connection.executeQuery(str);
 	if(rs.next()){
 %>
@@ -30,7 +31,7 @@ regist_config
 </script>
 <%
 	}else{
-		String sql="insert into tb_Customar values('"+name+"','"+password+"','1','"+email+"','"+sex+"','"+phone+"','"+question+"','"+result+"','"+time.currentlyTime()+"')";
+		String sql="insert into tb_Customer values('"+name+"','"+password+"','1','"+email+"','"+sex+"','"+phone+"','"+question+"','"+result+"','"+gshowdate+"')";
 		boolean sert=connection.executeUpdata(sql);
             if(sert)
 {%>

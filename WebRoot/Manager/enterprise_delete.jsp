@@ -3,12 +3,12 @@
 <html>
 <head>
     <title>
-        enterprise_delete page
+        car_delete page
     </title>
 </head>
 <body bgcolor="#ffffff">
 <%
-    String sql="delete tb_CarMessage where ID="+request.getParameter("id");
+    String sql="delete tb_CarMessage where Code="+request.getParameter("code");
     boolean dele=connection.executeUpdata(sql);
     if(dele)
     {
@@ -17,7 +17,7 @@
     alert("É¾³ı³É¹¦£¡£¡£¡");
 </script>
 <%
-    response.sendRedirect("enterprise_select.jsp");
+    response.sendRedirect("car_select.jsp");
 }else
 {
 %>

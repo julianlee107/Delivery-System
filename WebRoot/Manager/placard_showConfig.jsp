@@ -25,13 +25,9 @@ sql="insert tb_Placard values('"+title+"','"+content+"','"+author+"','"+datatime
 
 
 
-boolean bb=connection.Update(sql);
+boolean bb=connection.executeUpdata(sql);
 
-%>
-<script type="text/javascript">
-alert(<%=bb%>);
-</script>
-<%
+
 if(bb)
 {%>
 <script language="javascript">

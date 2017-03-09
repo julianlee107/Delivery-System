@@ -104,6 +104,6 @@ userName=rs.getString("UserName");
  System.out.println("²éÑ¯Òì³££¡£¡");
 }
 %>
-</table><jsp:include page="../down.jsp"/>
+</table><jsp:include page="down.jsp"/>
 </body>
 </html>

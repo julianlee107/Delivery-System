@@ -88,6 +88,6 @@ e.printStackTrace();
 </td>
    </tr>
 </table>
-</form><jsp:include page="../down.jsp"/>
+</form><jsp:include page="down.jsp"/>
 </body>
 </html>

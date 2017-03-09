@@ -6,7 +6,7 @@ public class JDBConnection {
 	private Statement st = null;	//设置Statement类的对象
 	private ResultSet rs=null;
 	private String dbDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"; // 数据库的驱动
-	private String url = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=DB_wuliu"; // URL地址
+	private String url = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=db_WuLiu"; // URL地址
 	public  JDBConnection(){
 		try {
 			Class.forName(dbDriver).newInstance(); // 加载数据库驱动

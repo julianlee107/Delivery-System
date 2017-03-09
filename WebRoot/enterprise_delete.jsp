@@ -1,28 +1,28 @@
-<%@ page contentType="text/html; charset=GBK" %>
+<%@ page contentType="text/html; charset=utf-8"%>
 <jsp:useBean id="connection" scope="page" class="com.wy.JDBConnection"/>
 <html>
 <head>
 <title>
-placard
+enterprise_delete page
 </title>
 </head>
 <body bgcolor="#ffffff">
 <%
-String sql="delete tb_Placard where ID="+request.getParameter("id");
+
+String sql="delete tb_enterprise where ID="+request.getParameter("id");
 boolean dele=connection.executeUpdata(sql);
 if(dele)
 {
 %>
 <script language="javascript">
-alert("É¾³ı³É¹¦£¡£¡£¡");
+alert("åˆ é™¤æˆåŠŸï¼ï¼ï¼");
 </script>
 <%
-response.sendRedirect("placard_select.jsp");
-}else
-{
+response.sendRedirect("enterprise_select.jsp");
+}else{
 %>
 <script language="javascript">
-alert("É¾³ıÊ§°Ü£¡£¡£¡");
+alert("åˆ é™¤å¤±è´¥ï¼ï¼ï¼");
 history.back();
 </script>
 <%

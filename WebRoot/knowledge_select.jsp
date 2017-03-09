@@ -18,15 +18,12 @@
     int pagecount=1;
 %>
 
-<body bgcolor="#ffffff"><jsp:include page="mtop.jsp"/>
+<body bgcolor="#ffffff"><jsp:include page="top.jsp"/>
 <table width="785" height="117" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
     <tr>
-        <td height="38" align="center" colspan="5">网站公告信息</td>
+        <td height="38" align="center" colspan="5">物流知识</td>
     </tr>
     <tr>
-        <td height="29" align="right" colspan="5">
-            <a href="placard_add.jsp">发布公告信息</a></td>
-    </tr>
     <tr>
         <td width="95" height="29" align="center">ID</td>
         <td width="186" height="29" align="center">标题</td>
@@ -75,8 +72,7 @@
         <td width="204" height="32" align="center"><%=rs.getString("Author")%></td>
         <td width="158" height="32" align="center"><%=rs.getDate("IssueDate")%></td>
         <td height="32" align="center">
-            <a href="konwledge_change_.jsp?id=<%=code%>">修改</a>&nbsp;
-            <a href="konwledge_delete.jsp?id=<%=code%>">删除</a></td>
+            <a href="knowledge_show.jsp?id=<%=code%>">详细</a>
     </tr>
     <%
             if(!rs.next())
@@ -105,6 +101,6 @@
         {e.printStackTrace();}
     %>
 </table>
-<jsp:include page="down.jsp"/>
+
 </body>
 </html>

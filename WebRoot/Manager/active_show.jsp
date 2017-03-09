@@ -94,6 +94,6 @@ e.printStackTrace();
    </tr>
 </table>
 </form>
-<jsp:include page="../down.jsp"/>
+<jsp:include page="down.jsp"/>
 </body>
 </html>

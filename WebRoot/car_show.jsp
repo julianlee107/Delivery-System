@@ -2,35 +2,49 @@
 <jsp:useBean id="connection" scope="page" class="com.wy.JDBConnection"/>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-    <link rel="stylesheet" href="../CSS/style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="stylesheet" href="CSS/style.css">
     <title>
         car_show page
     </title>
 </head>
 <%!
+	String login;
     ResultSet rs=null;
     String sql;
     String userName;
     int num;
+    String code;
 %>
 <%
-    sql="select * from tb_CarMessage where ID="+request.getParameter("id");
+	code=request.getParameter("code");
+    sql="select * from tb_CarMessage where Code="+code;
+	login=(String)session.getAttribute("login");
+	userName=(String)session.getAttribute("name");
+	if(login==null)
+{
+%>
+<script language="javascript">
+alert("您还未登录，不能浏览详细信息！！！");
+<%
+response.sendRedirect("login.jsp");
+%>
+</script>
+<%}
 %>
 
 <body bgcolor="#ffffff">
-<jsp:include page="mtop.jsp"/>
-<table width="785" height="377" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#333333">
-    <tr>
-        <td height="52" colspan="4" align="center">
-            车辆详细信息</td>
-    </tr>
+<jsp:include page="top.jsp"/>
+<table width="785" height="480" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
+    <<tr>
+    <td width="100%" height="52" colspan="4" align="center">
+  车辆详细信息</td>
+  </tr>
     <%try
     {
-        rs=connection.executeQuery(sql);
-        if(rs.next())
-        {
-            num=rs.getInt("ID");
+       rs=connection.executeQuery(sql);
+if(rs.next())
+{
     %>
     <tr>
         <td width="21%" height="29" align="center">车辆牌号：</td>
@@ -54,7 +68,7 @@
         <td width="21%" height="29" align="center">驾龄：</td>
         <td width="31%" height="29" align="center"><%=rs.getString("DriverTime")%></td>
         <td width="21%" height="29" align="center">驾驶证号：</td>
-        <td width="27%" height="29" align="center"><%=rs.getString("LicenceNber")%></td>
+        <td width="27%" height="29" align="center"><%=rs.getString("LicenceNumber")%></td>
     </tr>
     <tr>
         <td width="21%" height="30" align="center">驾驶证类型：</td>
@@ -84,23 +98,27 @@
         <td width="21%" height="31" align="center">发布人：</td>
         <td height="31" colspan="3" align="left"><%=userName%></td>
     </tr>
+<%
+if(userName.equals(userName))
+   {
+   %>
     <tr>
-        <td width="30%" height="16">
-            <input type="submit" value="修改" name="B1"onClick="return check()">
-            <input type="reset" value="重写" name="B2">
-            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-            <a href="car_select.jsp">返回</a>
-        </td>
-    </tr>
-    <%
-            }
+      <td width="100%" height="45" colspan="4" align="center">
+        <a href="goods_change.jsp?id=<%=code%>">修改</a>&nbsp;&nbsp;
+        <a href="goods_delete.jsp?id=<%=code%>">删除</a></td>
+  </tr>
 
-        }catch(SQLException e)
-        {
-            System.out.println("查询异常！！");
-        }
-    %>
+<%
+   }
 
-</table><jsp:include page="../down.jsp"/>
+}
+
+}catch(SQLException e)
+{
+ System.out.print("查询异常！！");
+}
+
+%>
+</table><jsp:include page="down.jsp"/>
 </body>
 </html>

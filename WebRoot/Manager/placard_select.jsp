@@ -105,6 +105,6 @@ break;
 {e.printStackTrace();}
 %>
 </table>
-<jsp:include page="../down.jsp"/>
+<jsp:include page="down.jsp"/>
 </body>
 </html>

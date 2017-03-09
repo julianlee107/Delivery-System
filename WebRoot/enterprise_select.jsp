@@ -29,8 +29,7 @@ alert("您还未登录，不能浏览详细信息！！！");
 <%
 response.sendRedirect("login.jsp");
 }
-%>   
-<jsp:include page="mtop.jsp"/>
+%>   <jsp:include page="top.jsp"/>
 <table width="786"  border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
 <tr>
   <td width="786" colspan="9">
@@ -50,7 +49,7 @@ response.sendRedirect("login.jsp");
     <td width="786" height="29">操作</td>
   </tr>
 <%
-    sql="select * from tb_Enterprise order by IssueDate desc";
+    sql="select * from tb_enterprise order by IssueDate desc";
 try
 {
  rs=connection.executeQuery(sql);
@@ -89,7 +88,7 @@ n=rs.getInt("ID");
 <td width="786" height="29" align="center"><%=rs.getString("WorkArea")%></td>
 <td width="786" height="29" align="center"><%=rs.getString("Address")%></td>
 <td width="786" height="29"> <p align="center">
-  <a href="enterprise_xiangxi.jsp?id=<%=n%>">详细</a></td>
+  <a href="enterprise_show.jsp?id=<%=n%>">详细</a></td>
 </tr>
 <%
 if(!rs.next())

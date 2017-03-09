@@ -240,6 +240,6 @@ String trans=rs.getString("Style");
   </table>
 <%}%>
 </form>
-<jsp:include page="../down.jsp"/>
+<jsp:include page="down.jsp"/>
 </body>
 </html>

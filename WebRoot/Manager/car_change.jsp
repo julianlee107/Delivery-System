@@ -85,7 +85,7 @@
 </Script>
 <body bgcolor="#ffffff">
 
-<jsp:include page="top.jsp"/>
+<jsp:include page="mtop.jsp"/>
 <p align="center"><b>车辆信息发布</b></p>
 <form method="POST" action="car_changeConfig.jsp" name="form1">
     <table width="786" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
@@ -113,14 +113,14 @@
             </td>
             <td width="30%" height="42">
                 <p align="center"><input type="text" name="carLoad" size="20"></p>
-            </td>顿
+            </td>
         </tr>
         <tr>
             <td width="20%" height="43">
                 <p align="center">使用时间：</p>      </td>
             <td width="36%" height="43">
                 <p align="center"><input type="text" name="usedTime" size="20"></p>
-            </td>年
+            </td>
             <td width="18%" height="43">
                 <p align="center">驾驶员姓名：</p>
             </td>

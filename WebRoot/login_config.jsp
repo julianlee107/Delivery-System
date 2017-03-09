@@ -18,7 +18,7 @@ if(name==""&&name==null&&password==""&&password==null)
 else{
 try
 {
-String sql="select * from tb_Customar where Name='"+name+"' and Password='"+password+"'";
+String sql="select * from tb_Customer where Name='"+name+"' and Password='"+password+"'";
 rs = connection.executeQuery(sql);
 if(rs.next())
 {

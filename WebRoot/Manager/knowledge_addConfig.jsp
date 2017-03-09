@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=GB2312" %>
-<%@ page import="java.util.Date"%>
+<%@ page import="java.sql.*,java.util.Date"%>
 <jsp:useBean id="connection" scope="page" class="com.wy.JDBConnection"/>
 <html>
 <head>
@@ -25,7 +25,7 @@
 
 
 
-    boolean bb=connection.Update(sql);
+    boolean bb=connection.executeUpdata(sql);
 
 %>
 <script type="text/javascript">
@@ -38,7 +38,7 @@
     alert("您输入的公告信息已经成功完成！！！");
 </script>
 <%
-    response.sendRedirect("placard_select.jsp");
+    response.sendRedirect("knowledge_select.jsp");
 }else
 {
 %>

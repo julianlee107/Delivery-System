@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 public class test {
 	public static void main(String[] args) {
 		 ResultSet rs1=null;
-		 String sql="select * from tb_Customar";
+		 String sql="select * from tb_Customer";
 		 JDBConnection op=new JDBConnection();
 		 rs1=op.executeQuery(sql);
 		 if(rs1!=null)

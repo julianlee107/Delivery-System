@@ -17,15 +17,12 @@ int rowcount=0;
 int pagecount=1;
 %>
 
-<body bgcolor="#ffffff"><jsp:include page="mtop.jsp"/>
-<table width="783" height="137" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
+<body bgcolor="#ffffff"><jsp:include page="top.jsp"/>
+<table width="786" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
   <tr>
   <td width="100%" colspan="9" height="60" align="center">
      车辆信息
   </td>
-  <tr>
-    <td width="786" height="30" colspan="9" align="right"><a href="car_add.jsp">发布信息...</a></td>
-  </tr>
   </tr>
   <tr align="center">
     <td width="11%" height="29">车牌号码</td>
@@ -37,7 +34,7 @@ int pagecount=1;
     <td width="11%" height="29">运输类型</td>
     <td width="12%" height="29">操作</td>
   </tr>  <%
-    sql="select * from tb_CarMessage order by IssueDate desc";
+    sql="select * from tb_carmessage order by IssueDate desc";
 try
 {
  rs=connection.executeQuery(sql);
@@ -79,8 +76,7 @@ code=rs.getInt("Code");
 <td width="11%" height="29"><%=rs.getString("DriverTime")%></td>
 <td width="11%" height="29"><%=rs.getString("TransportStyle")%></td>
     <td height="32" align="center">
-   <a href="car_change.jsp?id=<%=code%>">修改</a>&nbsp;
-   <a href="car_delete.jsp?id=<%=code%>">删除</a></td>
+   <a href="car_show.jsp?code=<%=code%>">详细</a>&nbsp;
 </tr>
 <%
 if(!rs.next())

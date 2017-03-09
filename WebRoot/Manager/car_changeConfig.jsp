@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>
-        car_change_config page
+        enterprise_change_config page
     </title>
 </head>
 <body bgcolor="#ffffff">
@@ -15,39 +15,36 @@
 %>
 <%
     request.setCharacterEncoding("gb2312");
-    String trademark=request.getParameter("trademark").trim();
-    String brand=request.getParameter("brand").trim();
-    String style=request.getParameter("style").trim();
-    String car_load=request.getParameter("carLord").trim();
-    String used_time=request.getParameter("usedTime").trim();
-    String driver_name=request.getParameter("driverName").trim();
-    String licence_num=request.getParameter("licenceNumber").trim();
-    String  driver_time=request.getParameter("driverTime").trim();
-    String licence_style=request.getParameter("licenceStyle").trim();
-    String transport_style=request.getParameter("transportStyle").trim();
+    String enterprise_sort=request.getParameter("enterpriseSort").trim();
+    String enterprise_name=request.getParameter("enterpriseName").trim();
+    String operation=request.getParameter("operation").trim();
+    String work_area=request.getParameter("workArea").trim();
+    String phone=request.getParameter("phone").trim();
     String link_man=request.getParameter("linkMan").trim();
-    String link_phone=request.getParameter("linkPhone").trim();
-    String remark=request.getParameter("remark").trim();
+    String handset=request.getParameter("handSet").trim();
+    String fax=request.getParameter("fax").trim();
+    String email=request.getParameter("email").trim();
+    String http=request.getParameter("http").trim();
+    String intro=request.getParameter("intro").trim();
     String issudate=request.getParameter("issudate");
     String username=request.getParameter("username").trim();
     java.sql.Date gshowdate=new java.sql.Date(date.getYear(),date.getMonth(),date.getDate());
-    sql="update tb_CarMessage set Trademark='"+trademark+"',Brand='"+brand+"',CarLord='"+
-            car_load+"',UsedTime='"+used_time+"',DriverName='"+driver_name+"',LicenceNumber='"+licence_num+"',licence='"+
-            licence_style+"',TransportStyle='"+transport_style+"',LinkMan='"+link_man+"',DriverTime='"+driver_time+",LinkPhone='"+
-            link_phone+"',IssueDate='"+
-            issudate+"',Remark='"+remark+"',UserName='"+
-            username+"',Style='"+style+" where Code="+request.getParameter("code");
+    sql="update tb_Enterprise set EnterpriseSort='"+enterprise_sort+"',EnterpriseName='"+enterprise_name+"',Operation='"+
+            operation+"',WorkArea='"+work_area+"',Phone='"+phone+"',HandSet='"+handset+"',Fax='"+
+            fax+"',Email='"+email+"',Http='"+http+"',Intro='"+intro+"',IssueDate='"+
+            issudate+"',UserName='"+
+            username+"' where Code="+request.getParameter("code");
     boolean sert=connection.executeUpdata(sql);
     if(sert)
     {%>
 <script language="javascript">
-    alert("您输入的车辆信息已经成功修改！！！");
+    alert("您输入的企业信息已经成功修改！！！");
     <%
-    response.sendRedirect("car_select.jsp");
+    response.sendRedirect("enterprise_select.jsp");
     }else
     {
     %>
-    alert("您输入的车辆信息信息修改失败！！！");
+    alert("您输入的企业信息信息修改失败！！！");
     history.back();
     <%
     }
