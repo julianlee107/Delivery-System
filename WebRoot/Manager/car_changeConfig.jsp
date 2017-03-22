@@ -14,6 +14,7 @@
     int i;
 %>
 <%
+    //修改选中的车辆信息
     request.setCharacterEncoding("gb2312");
     String enterprise_sort=request.getParameter("enterpriseSort").trim();
     String enterprise_name=request.getParameter("enterpriseName").trim();

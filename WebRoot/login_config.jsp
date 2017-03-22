@@ -18,6 +18,7 @@ if(name==""&&name==null&&password==""&&password==null)
 else{
 try
 {
+//    用来将用户输入的账号密码进行匹配,如果返回的值为真,则存在该用户
 String sql="select * from tb_Customer where Name='"+name+"' and Password='"+password+"'";
 rs = connection.executeQuery(sql);
 if(rs.next())

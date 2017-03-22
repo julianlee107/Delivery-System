@@ -13,7 +13,7 @@ String sql;
 ResultSet rs;
 int i;
 %>
-<%
+<%//将提交的表单中的内容更新到对应的数据库
 request.setCharacterEncoding("gb2312");
 String gclass=request.getParameter("gclass").trim();
 String gname=request.getParameter("gname").trim();

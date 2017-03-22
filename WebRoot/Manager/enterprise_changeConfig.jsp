@@ -14,6 +14,7 @@
     int i;
 %>
 <%
+    //修改企业详情
     request.setCharacterEncoding("gb2312");
     String trademark=request.getParameter("trademark").trim();
     String brand=request.getParameter("brand").trim();

@@ -8,6 +8,7 @@
 </head>
 <body bgcolor="#ffffff">
 <%
+    //从数据库中删除选中的物流只是
     String sql="delete tb_Knowledge where ID="+request.getParameter("id");
     boolean dele=connection.executeUpdata(sql);
     if(dele)

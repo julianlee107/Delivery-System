@@ -32,7 +32,7 @@
         <td width="134" height="29" align="center">修改操作</td>
     </tr>
     <%
-
+        <%--查询物流知识--%>
         sql="select * from tb_Knowledge";
         try
         {
@@ -50,6 +50,7 @@
         rs.last();
         rowcount=rs.getRow();
         int showpage=1;
+//        分页
         pagecount=((rowcount%pagesize)==0?(rowcount/pagesize):(rowcount/pagesize)+1);
         String topage=request.getParameter("topage");
         if(topage!=null)

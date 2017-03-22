@@ -7,7 +7,7 @@ Goods_delete page
 </title>
 </head>
 <body bgcolor="#ffffff">
-<%
+<%//删除数据库中的信息
 String sql="delete tb_logistics where ID="+request.getParameter("id");
 boolean dele=connection.executeUpdata(sql);
 if(dele)

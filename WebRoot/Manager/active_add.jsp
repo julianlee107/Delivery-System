@@ -36,6 +36,7 @@ return false;
 }
 </script>
 <body bgcolor="#ffffff"><jsp:include page="mtop.jsp"/>
+<%--将表格中的内容发送到active_config中进行添加--%>
 <form method="POST" action="active_config.jsp"name="form1">
 <table width="785" height="174" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
   <tr>

@@ -14,6 +14,7 @@ Date date=new Date();
 %>
 <body bgcolor="#ffffff">
 <%
+    //修改物流动态
 request.setCharacterEncoding("gb2312");
 String title=request.getParameter("title");
 String content=request.getParameter("content");

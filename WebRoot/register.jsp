@@ -8,6 +8,7 @@ register
 <link href="CSS/style.css" type="text/css" rel="stylesheet">
 </head>
 <script language="javascript">
+    <%--检查表单是否填写完整--%>
       function check(){
 		if(form1.name.value==""){
 			alert("请输入你的用户名");

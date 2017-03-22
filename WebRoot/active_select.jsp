@@ -46,7 +46,7 @@ response.sendRedirect("login.jsp");
    
   </tr>
 <%
-
+<%--查询数据库中的数据--%>
 sql="select ID,Title,Author,IssueDate from tb_logistics ";
 try
 {
@@ -80,6 +80,7 @@ for(int i=1;i<=pagesize;i++)
 {
 code=rs.getInt("ID");
 %>
+<%--显示查询的结果--%>
  <tr>
     <td width="108" height="32" align="center"><%=code%></td>
     <td width="108" height="32" align="center"><%=rs.getString("Title")%></td>

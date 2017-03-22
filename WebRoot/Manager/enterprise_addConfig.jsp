@@ -14,6 +14,7 @@
     int i;
 %>
 <%
+    //添加企业信息
     request.setCharacterEncoding("gb2312");
     String enterprise_sort=request.getParameter("enterpriseSort");
     String enterprise_name=request.getParameter("enterpriseName");

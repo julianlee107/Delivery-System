@@ -18,6 +18,7 @@ int code;
     <td width="100%" height="39" align="center">动态信息</td>
   </tr>
 <%
+  <%--查询物流动态详细--%>
 sql="select * from tb_logistics where ID="+request.getParameter("id");
 try
 {

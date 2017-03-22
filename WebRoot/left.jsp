@@ -15,6 +15,7 @@ String pow=(String)session.getAttribute("pow");
 	  <table width="202" border="0" cellpadding="0" cellspacing="0" background="image/8.jpg" >
   <tr>
     <td>
+        <%--用户登录的表单--%>
 <%if(login==null || login==""){%><form method="POST" action="login_config.jsp" name="form_u">
 <table width="91%"  height="87"  border="0" cellpadding="0" cellspacing="0">
           <tr>

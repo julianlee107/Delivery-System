@@ -114,6 +114,7 @@ if(rs.next())
 {
 code=rs.getInt("ID");
 %>
+    <%--修改货物信息的表单,以POST的方式发送给goods_changeConfig.jsp--%>
   <table width="785" height="561" border="1" align="center" cellpadding="0"cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
     <tr>
       <td width="20%" height="43" align="center">
